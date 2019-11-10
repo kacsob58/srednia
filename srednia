@@ -1,0 +1,62 @@
+package pl.tt;
+import java.sql.SQLOutput;
+import java.util.Scanner;
+import java.lang.Math;
+
+public class Main {
+
+    public static double srednia(double sumaLiczb, double iloscLiczb) {
+        return sumaLiczb / iloscLiczb;
+    }
+
+
+    public static void main(String[] args) {
+
+        Scanner keyboard = new Scanner(System.in);
+
+        double sumaLiczb = 0;
+        double iloscLiczb = 0;
+
+
+        while (true) {
+            System.out.println("Podaj liczbe:");
+            double liczba = keyboard.nextInt();
+            sumaLiczb = liczba + sumaLiczb;
+            iloscLiczb = iloscLiczb + 1;
+
+            System.out.println("Podaj wiecej liczb lub wpisz `tak` jezeli chcesz obliczyc srednia.");
+            String wyjscie = keyboard.next();
+
+            if("tak".equals(wyjscie)){
+                System.out.println("Srednia tych liczb to:");
+                System.out.println(srednia(iloscLiczb,sumaLiczb));
+                break;
+
+
+            }
+
+        }
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
